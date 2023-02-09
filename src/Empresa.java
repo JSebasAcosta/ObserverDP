@@ -4,6 +4,7 @@ import java.util.ArrayList;
 public class Empresa implements Observables {
 
     int valorNuevo;
+    int valorAnterior = 85;
     private ArrayList<Observadores> observador;
 
     public Empresa() {
@@ -23,10 +24,14 @@ public class Empresa implements Observables {
     public void notificar() {
 
         for (Observadores nuevoCliente : observador) {
+            if (valorAnterior == valorNuevo) {
+                System.out.println("El valor de la accion en la empresa sigue en: " + valorAnterior);
+            } else {
+                System.out.println("El valor de la accion en la empresa paso de: " + valorAnterior + " a: " + valorNuevo);
+            }
             nuevoCliente.recibir();
-            System.out.println("El valor de la accion de la empresa paso a: " + valorNuevo);
         }
-
+        valorAnterior = valorNuevo;
 
     }
 }

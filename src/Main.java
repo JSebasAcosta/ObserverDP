@@ -1,11 +1,25 @@
+import java.util.concurrent.TimeUnit;
+import java.util.Timer;
+import java.util.TimerTask;
 public class Main {
 
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
 
-        Cliente pepe=new Cliente();
+        int contador=0;
+        Accionista pepe=new Accionista();
         Empresa gasolina=new Empresa();
         gasolina.agregarCliente(pepe);
-        gasolina.CambiarPrecio();
+
+        Timer timer=new Timer();
+        TimerTask cambiaPrecio=new TimerTask() {
+            @Override
+            public void run(){
+                gasolina.CambiarPrecio();
+            }
+        };
+        timer.schedule(cambiaPrecio, 0, 3500);
+
+
     }
 }

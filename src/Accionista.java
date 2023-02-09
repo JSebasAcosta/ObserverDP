@@ -1,4 +1,4 @@
-public class Cliente implements Observadores{
+public class Accionista implements Observadores{
 
 
     @Override
