@@ -1,0 +1,2 @@
+# ObserverDP
+Últimamente a mi hermano le han interesado bastante todos los temas relacionados a la bolsa de valores, tanto que ha decidido invertir en algunas empresas que pensaba podrían generarle un poco de ganancias. El problema es que la aplicación que usa se tarda mucho en enviar notificaciones de los cambios que a él le interesan, si es que los envían, por lo que quiere una solución que le notifique cada vez que ocurra un cambio en el valor actual de las acciones de esas empresas. 
